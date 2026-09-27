@@ -137,7 +137,8 @@ Using a reference RTX A6000 rental rate of $0.57/hour:
     |     4     |  6.20 req/s |     0.630 s     |     1.078 s     |    0   |
     |     8     |  7.88 req/s |     0.967 s     |     1.578 s     |    0   |
 
-    - Benchmark methodology: 
+    - Benchmark methodology:
+      
     *NOTE: The full 500-image sequential benchmark and the dedicated concurrency benchmark were separate test runs and should not be interpreted as identical measurements.*
 
     a) The full sequential benchmark processed all 500 images and was used for the main quality and latency results.
@@ -201,8 +202,8 @@ The required artifacts to reproduce the Phase 1 deployment and benchmark:
      - python3 evaluation/benchmark_concurrency.py
 
 - **Repository**:
-    Repository URL: https://github.com/WasanAlThobaiti/AgroMind-.git
-    Commit hash: 7b883c092d65bec9c1490e035526fafbfad88988
+    - Repository URL: https://github.com/WasanAlThobaiti/AgroMind-.git
+    - Commit hash: 7b883c092d65bec9c1490e035526fafbfad88988
 
 ## 7. Conclusion
  - The AgroMind Phase 1 deployment is reproducible because the model, serving configuration, Kubernetes resources, preprocessing settings, and evaluation workflow are all documented.
