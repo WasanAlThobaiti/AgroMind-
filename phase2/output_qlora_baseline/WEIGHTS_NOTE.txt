@@ -1,0 +1,1 @@
+Adapter weights (adapter_model.safetensors ~181MB) are stored locally on server / shared storage due to GitHub 100MB file limit.

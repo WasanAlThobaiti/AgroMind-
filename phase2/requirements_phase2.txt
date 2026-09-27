@@ -1,0 +1,10 @@
+# Suggested environment for the Phase 2 starter scripts.
+# Exact versions may need adjustment for the available CUDA image.
+torch>=2.4
+transformers>=4.49
+peft>=0.14
+accelerate>=1.2
+bitsandbytes>=0.45
+qwen-vl-utils>=0.0.10
+datasets>=3.2
+pandas>=2.1

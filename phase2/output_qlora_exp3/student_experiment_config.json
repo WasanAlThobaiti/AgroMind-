@@ -1,0 +1,23 @@
+{
+  "experiment_name": "team01_qwen25vl_qlora_baseline",
+  "hypothesis": "Baseline QLoRA fine-tuning will establish domain-specific recognition for crops and plant diseases over the zero-shot base model.",
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "epochs": 5.0,
+  "learning_rate": 0.0001,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "seed": 42,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "notes": "Default baseline QLoRA configuration with rank 16 and learning rate 1e-4."
+}
