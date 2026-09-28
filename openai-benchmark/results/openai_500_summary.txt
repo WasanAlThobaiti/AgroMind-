@@ -1,0 +1,54 @@
+GPT-4o mini — AgroMind Benchmark Summary
+=========================================
+
+Model:
+gpt-4o-mini-2024-07-18
+
+DATASET
+-------
+Total dataset rows: 500
+Available images: 500
+Successful requests: 500
+API errors: 0
+Missing images: 0
+Request success rate: 100.00%
+
+MODEL QUALITY
+-------------
+Crop accuracy: 45.00%
+Disease accuracy: 14.00%
+Combined diagnosis accuracy: 5.20%
+Valid-output rate: 99.60%
+
+END-TO-END QUALITY
+------------------
+Crop accuracy: 45.00%
+Disease accuracy: 14.00%
+Combined diagnosis accuracy: 5.20%
+
+LATENCY
+-------
+Mean latency: 1.988 s
+p50 latency: 1.813 s
+p95 latency: 3.423 s
+Minimum latency: 0.895 s
+Maximum latency: 6.289 s
+
+TOKEN USAGE
+-----------
+Input tokens: 13,947,402
+Output tokens: 4,715
+
+ESTIMATED API COST
+------------------
+Input cost: $2.0921
+Output cost: $0.0028
+Total cost: $2.0949
+Average cost/image: $0.004190
+Estimated cost/1,000 images: $4.1899
+
+EVALUATION METHOD
+-----------------
+Crop and disease accuracy use strict normalized string matching.
+Whitespace and Chinese/English comma differences are normalized.
+No synonym mapping or semantic matching is applied.
