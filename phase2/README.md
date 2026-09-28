@@ -35,22 +35,31 @@ The 5-epoch variation improved combined diagnosis accuracy by 4.31 percentage po
 
 ## Repository Structure
 
+```text
 phase2/
 ├── README.md
+├── requirements_phase2.txt
+│
 ├── report/
 │   └── AI_DATA_CENTER_Phase2_report.md
+│
 ├── configs/
 │   ├── baseline_3epoch_config.json
 │   └── variation_5epoch_config.json
+│
 ├── scripts/
 │   ├── train_qwen25vl_qlora_starter.py
 │   └── evaluate_qwen25vl_starter.py
+│
 ├── output_qlora_baseline/
 ├── output_qlora_exp3/
+│
 ├── results/
+│
 └── k8s/
     ├── deployment.yaml
     └── service.yaml
+```
 
 ## Folder Description
 
