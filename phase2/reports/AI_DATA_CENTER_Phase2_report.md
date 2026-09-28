@@ -122,14 +122,17 @@ To ensure reproducibility, all configurations, commands, model artifacts, and ev
       - `python3 scripts/train_qwen25vl_qlora_starter.py --train-csv phase2_data/train/labels.csv --image-root phase2_data/train/images --validation-csv phase2_data/validation/labels.csv --validation-image-root phase2_data/validation/images --output-dir output_qlora_baseline --config configs/baseline_3epoch_config.json`
   
   b) Evaluation command:
+  
       - `python3 scripts/evaluate_qwen25vl_starter.py --csv phase2_data/evaluation/labels.csv --image-root phase2_data/evaluation/images --adapter output_qlora_baseline --output-csv results/eval_lora_baseline_results.csv --run-label "qlora_baseline"` 
 
 - **5-epoch variation Commands:**
   
   a) Training command:
+  
       - `python3 scripts/train_qwen25vl_qlora_starter.py --train-csv phase2_data/train/labels.csv --image-root phase2_data/train/images --validation-csv phase2_data/validation/labels.csv --validation-image-root phase2_data/validation/images --output-dir output_qlora_exp3 --config configs/variation_5epoch_config.json`
   
   b) Evaluation command:
+  
       - `python3 scripts/evaluate_qwen25vl_starter.py --csv phase2_data/evaluation/labels.csv --image-root phase2_data/evaluation/images --adapter output_qlora_exp3 --output-csv results/eval_lora_exp3_results.csv --run-label "qlora_exp3"` 
 
 - Output adapter path or artifact: 
