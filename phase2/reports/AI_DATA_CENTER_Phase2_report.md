@@ -82,8 +82,6 @@
 
 - **Representative prediction changes:**
 
-**Representative prediction changes:**
-
 | Error-analysis example | Ground truth | 3-epoch baseline | 5-epoch variation | Outcome |
 |---|---|---|---|---|
 | Tomato disease | `番茄，疫病` | `番茄，病毒病` ❌ | `番茄，疫病` ✅ | Corrected |
@@ -91,7 +89,7 @@
 | Cucumber downy mildew | `黄瓜，霜霉病` | `黄瓜，螨，茶黄螨` ❌ | `黄瓜，霜霉病` ✅ | Corrected |
 | Cucumber viral disease | `黄瓜，病毒病` | `黄瓜，病毒病` ✅ | `黄瓜，霜霉病` ❌ | Regression |
 
-  - Effect of additional epochs:
+- **Effect of additional epochs:**
     - Increasing training from 3 to 5 epochs corrected **10 cases** that were incorrect in the 3-epoch baseline, while **5 previously correct cases became incorrect.**
     - This produced a net improvement of 5 correctly diagnosed images, increasing combined diagnosis accuracy from **51.72% (60/116)** to **56.03% (65/116).**
 
