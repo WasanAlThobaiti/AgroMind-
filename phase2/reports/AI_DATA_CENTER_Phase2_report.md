@@ -81,6 +81,9 @@
   - Inspection of individual predictions also showed that additional training corrected some baseline errors, although some previously correct predictions became incorrect.
 
 - **Representative prediction changes:**
+
+**Representative prediction changes:**
+
 | Error-analysis example | Ground truth | 3-epoch baseline | 5-epoch variation | Outcome |
 |---|---|---|---|---|
 | Tomato disease | `番茄，疫病` | `番茄，病毒病` ❌ | `番茄，疫病` ✅ | Corrected |
