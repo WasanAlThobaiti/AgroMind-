@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agromind-vllm
+  namespace: team
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: agromind-vllm
+
+  template:
+    metadata:
+      labels:
+        app: agromind-vllm
+
+    spec:
+      containers:
+        - name: agromind-vllm
+
+          image: vllm/vllm-openai:v0.7.3
+
+          args:
+            - "--model=Qwen/Qwen2.5-VL-7B-Instruct"
+            - "--dtype=bfloat16"
+            - "--max-model-len=8192"
+            - "--gpu-memory-utilization=0.85"
+            - "--limit-mm-per-prompt=image=1"
+            - '--mm-processor-kwargs={"min_pixels":200704,"max_pixels":401408}'
+            - "--port=8000"
+
+          ports:
+            - containerPort: 8000
+
+          resources:
+            requests:
+              cpu: "4"
+              memory: "16Gi"
+              nvidia.com/gpu: 1
+            limits:
+              cpu: "4"
+              memory: "16Gi"
+              nvidia.com/gpu: 1
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            failureThreshold: 12
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 600
+            periodSeconds: 20
+            failureThreshold: 3
